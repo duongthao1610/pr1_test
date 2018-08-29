@@ -31,3 +31,9 @@
 
 en:
   hello: "Hello world"
+  static_page:
+    home:
+      title: "Home"
+      content: "Home page"
+
+
