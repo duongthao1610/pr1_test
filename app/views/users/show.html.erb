@@ -1,0 +1,21 @@
+<div>
+  <aside class="col-md-4">
+    <div>
+      <h1>My Profile</h1>
+    </div>
+    <div class="hero-unit user_info">
+      <h1><%= image_tag @user.avatar.url(:thumb) if @user.avatar? %></h1>
+      <p><%= "Name: " %>
+         <%= @user.name %>
+      </p>
+      <p>
+        <%= "Email: " %>
+        <%= @user.email %>
+      </p>
+      <p>
+        <%= "Birthday: " %>
+        <%= @user.dob %>
+      </p>
+    </div>
+  </aside>
+</div>
