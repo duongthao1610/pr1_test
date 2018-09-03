@@ -10,14 +10,14 @@
 
 </head>
 <body class="test-tempolary">
-  <%= render 'layouts/header' %>
-  <div class="container">
-    <% flash.each do |message_type, message| %>
-      <div class="alert alert-info"><%= message %></div>
-      <% end %>
-    <%= yield %>
-  </div>
-  <%= render "layouts/footer" %>
+<%= render 'layouts/admin_header' %>
+<div class="container">
+  <% flash.each do |message_type, message| %>
+    <div class="alert alert-info"><%= message %></div>
+  <% end %>
+  <%= yield %>
+</div>
+<%= render "layouts/footer" %>
 </body>
 
 

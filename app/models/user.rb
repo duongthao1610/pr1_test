@@ -11,6 +11,12 @@ class User < ApplicationRecord
   validates_integrity_of :avatar
   validates_processing_of :avatar
 
+  scope :latest, -> {order created_at: :desc}
+
+  def self.search(search)
+    where("name LIKE ?", "%#{search}%")
+  end
+
   def self.new_with_session params, session
     super.tap do |user|
       if data = session["devise.facebook_data"] && session["devise.facebook_data"]["extra"]["raw_info"]
