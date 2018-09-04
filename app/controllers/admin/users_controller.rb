@@ -1,5 +1,6 @@
 class Admin::UsersController < AdminsController
   # load_and_authorize_resource
+  before_action :authenticate_user!, only: [:index, :destroy]
 
   def index
     # @users= User.paginate(page: params[:page])

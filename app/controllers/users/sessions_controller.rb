@@ -26,10 +26,8 @@ class Users::SessionsController < Devise::SessionsController
   # end
   def after_sign_in_path_for(resource)
     if current_user.is_admin == false
-      binding.pry
       root_path
     else
-      binding.pry
       admin_users_path
     end
 

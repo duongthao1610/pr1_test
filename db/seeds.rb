@@ -14,6 +14,8 @@ User.create!(email: "admin@gmail.com",
              password: "password",
              password_confirmation: "password",
              is_admin: 1)
+Subject.create! ( name: "Java",
+                  description: "basic")
 
 99.times do |n|
   name  = Faker::Name.name

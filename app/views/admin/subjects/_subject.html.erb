@@ -1,0 +1,17 @@
+<tr>
+  <td class="text-l"><p><%=subject.name %></p></td>
+  <td class="text-l"><%= subject.description %></td>
+  <td><%= l subject.created_at, format: :long %></td>
+  <td class="text-center">
+    <%= link_to edit_admin_subject_path(subject),
+                title: "edit subject", class: "underline" do %>
+      <span class="glyphicon glyphicon-edit"></span>
+    <% end %>
+  </td>
+  <td class="text-center">
+    <%= link_to [:admin, subject], method: :delete, title: "delete subject",
+                class: "underline text-danger", data: {confirm: ( "Are you sure?")} do %>
+      <span class="glyphicon glyphicon-trash"></span>
+    <% end %>
+  </td>
+</tr>
